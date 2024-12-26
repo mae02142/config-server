@@ -1,0 +1,72 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: configServer
+  custom:
+    jwt:
+      secretKey: ${CUSTOM_JWT_SECRETKEY}
+  logging:
+    level:
+      org.springframework: INFO
+      com.project: DEBUG
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:mae02142/bookpli-config.git
+          default-label: main
+          ignoreLocalSshSettings: true
+          private-key: |
+            ----BEGIN RSA PRIVATE KEY-----
+            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
+            -----END RSA PRIVATE KEY-----
