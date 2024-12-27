@@ -4,13 +4,6 @@ server:
 spring:
   application:
     name: configServer
-  custom:
-    jwt:
-      secretKey: ${CUSTOM_JWT_SECRETKEY}
-  logging:
-    level:
-      org.springframework: INFO
-      com.project: DEBUG
   cloud:
     config:
       server:
